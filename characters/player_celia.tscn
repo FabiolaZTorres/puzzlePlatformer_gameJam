@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx3mnjm1iu1mm"]
+
+[ext_resource type="Texture2D" uid="uid://bv5txakhtxqfi" path="res://puzzlePlatformer_gameJam/art/Celia1.png" id="1_vwwj8"]
+[ext_resource type="Texture2D" uid="uid://d4ipge7umvjuh" path="res://puzzlePlatformer_gameJam/art/Celia2.png" id="2_ee17q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qi3rx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ee17q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_vwwj8")
+}],
+"loop": true,
+"name": &"walkingCelia",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w770"]
+size = Vector2(30, 32)
+
+[node name="playerCelia" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qi3rx")
+animation = &"walkingCelia"
+frame = 1
+frame_progress = 0.460382
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_7w770")

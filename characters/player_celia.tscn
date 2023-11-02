@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://bx3mnjm1iu1mm"]
 
-[ext_resource type="Texture2D" uid="uid://bv5txakhtxqfi" path="res://puzzlePlatformer_gameJam/art/Celia1.png" id="1_vwwj8"]
-[ext_resource type="Texture2D" uid="uid://d4ipge7umvjuh" path="res://puzzlePlatformer_gameJam/art/Celia2.png" id="2_ee17q"]
+[ext_resource type="Texture2D" uid="uid://ls7ypvi4j881" path="res://assets/Celia1.png" id="1_npxxo"]
+[ext_resource type="Texture2D" uid="uid://bvaaxkpdndfs8" path="res://assets/Celia2.png" id="2_37wjk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qi3rx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ee17q")
+"texture": ExtResource("1_npxxo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_vwwj8")
+"texture": ExtResource("2_37wjk")
 }],
 "loop": true,
 "name": &"walkingCelia",

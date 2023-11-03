@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfsc1bcdgjgh2"]
+
+[ext_resource type="Script" path="res://IceBlast.gd" id="1_d3nj2"]
+[ext_resource type="Texture2D" uid="uid://edcdqh2jwcm3" path="res://gun.png" id="2_md408"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5vdy"]
+size = Vector2(18, 16)
+
+[node name="IceBlast" type="Area2D"]
+script = ExtResource("1_d3nj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, -8)
+scale = Vector2(2, 2)
+texture = ExtResource("2_md408")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, -8)
+shape = SubResource("RectangleShape2D_e5vdy")

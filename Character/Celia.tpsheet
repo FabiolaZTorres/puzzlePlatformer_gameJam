@@ -1,0 +1,48 @@
+{
+	"textures": [
+		{
+			"image": "Celia.png",
+			"size": {
+				"w": 66,
+				"h": 36
+			},
+			"sprites": [
+				{
+					"filename": "Celia2.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 34,
+						"h": 34
+					},
+					"margin": {
+						"x": 1,
+						"y": 1,
+						"w": 2,
+						"h": 2
+					}
+				},
+				{
+					"filename": "Celia1.png",
+					"region": {
+						"x": 37,
+						"y": 1,
+						"w": 28,
+						"h": 34
+					},
+					"margin": {
+						"x": 1,
+						"y": 1,
+						"w": 8,
+						"h": 2
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:700384231edda15fe7f7857779c6fa44:9bc176a538f67edf1b144e9687b0c836:b30435f5f192895708d96965c1ff932f$"
+	}
+}

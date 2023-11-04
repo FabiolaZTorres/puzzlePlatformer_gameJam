@@ -1,0 +1,48 @@
+{
+	"textures": [
+		{
+			"image": "Slime.png",
+			"size": {
+				"w": 42,
+				"h": 81
+			},
+			"sprites": [
+				{
+					"filename": "Slime1.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 40,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 13,
+						"w": 0,
+						"h": 13
+					}
+				},
+				{
+					"filename": "Slime2.png",
+					"region": {
+						"x": 1,
+						"y": 40,
+						"w": 38,
+						"h": 40
+					},
+					"margin": {
+						"x": 1,
+						"y": 10,
+						"w": 2,
+						"h": 10
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:7dd0c448b75834e709a5e0b2b268c41f:76b063f1c9d323d7baf1e91c4c93a573:0c126199eb007adb09e09d710ba45ea5$"
+	}
+}

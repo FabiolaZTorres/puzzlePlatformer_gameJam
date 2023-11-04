@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfsc1bcdgjgh2"]
+
+[ext_resource type="Script" path="res://Character/Weapon/IceBlast.gd" id="1_nur8n"]
+[ext_resource type="Texture2D" uid="uid://dggvgw66oapts" path="res://Character/Weapon/Shard of Boreas.png" id="2_im83v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5vdy"]
+size = Vector2(18, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snjej"]
+atlas = ExtResource("2_im83v")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_613q0"]
+atlas = ExtResource("2_im83v")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grxib"]
+atlas = ExtResource("2_im83v")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_en2xj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snjej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_613q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grxib")
+}],
+"loop": true,
+"name": &"Breath of the Old Ones",
+"speed": 5.0
+}]
+
+[node name="IceBlast" type="Area2D"]
+script = ExtResource("1_nur8n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e5vdy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_en2xj")
+animation = &"Breath of the Old Ones"

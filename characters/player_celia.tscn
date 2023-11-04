@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://bx3mnjm1iu1mm"]
 
-[ext_resource type="Texture2D" uid="uid://du6yxpgdr4qij" path="res://assets/Celia1.png" id="1_npxxo"]
-[ext_resource type="Texture2D" uid="uid://bfcajyk0ww6tk" path="res://assets/Celia2.png" id="2_37wjk"]
+[ext_resource type="Texture2D" uid="uid://u7of6uned7hu" path="res://assets/Celia1.png" id="1_npxxo"]
+[ext_resource type="Texture2D" uid="uid://g4d8bfhrhqxr" path="res://assets/Celia2.png" id="2_37wjk"]
 
 [sub_resource type="GDScript" id="GDScript_0ro3b"]
 script/source = "extends CharacterBody2D
 
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -300.0
+@export var speed : float = 200.0
+@export var jump_velocity = -350.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
@@ -21,17 +21,17 @@ func _physics_process(delta):
 
 	# Handle Jump.
 	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis(\"move_left\", \"move_right\")
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * speed
 		$AnimatedSprite2D.play(\"walkingCelia\")
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
 		$AnimatedSprite2D.stop()
 
 	move_and_slide()
@@ -48,7 +48,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walkingCelia",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7w770"]
@@ -60,9 +60,6 @@ script = SubResource("GDScript_0ro3b")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qi3rx")
 animation = &"walkingCelia"
-frame = 1
-frame_progress = 0.460382
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_7w770")

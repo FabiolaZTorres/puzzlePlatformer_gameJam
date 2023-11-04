@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 
+@export var hp = 2
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -12,8 +13,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var IceBlast = preload("res://Character/Weapon/ice_blast.tscn");
 
-func _ready():
-	InjuryTracker
 
 func _physics_process(delta):
 	# Add the gravity.

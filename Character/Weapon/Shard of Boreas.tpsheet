@@ -1,0 +1,63 @@
+{
+	"textures": [
+		{
+			"image": "Shard of Boreas.png",
+			"size": {
+				"w": 60,
+				"h": 20
+			},
+			"sprites": [
+				{
+					"filename": "IceDagger1.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 18,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "IceDagger2.png",
+					"region": {
+						"x": 21,
+						"y": 1,
+						"w": 18,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "IceDagger3.png",
+					"region": {
+						"x": 41,
+						"y": 1,
+						"w": 18,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:53d258a5ab6d2c4a6caa8c2a12e95dc8:108fce89d7283693345da83236ae9d2a:cc48ce291ae21ac2295551a7f5cedf9f$"
+	}
+}

@@ -1,69 +1,28 @@
-[gd_scene load_steps=13 format=3 uid="uid://b28a1mabb3blh"]
+[gd_scene load_steps=8 format=3 uid="uid://b28a1mabb3blh"]
 
 [ext_resource type="Script" path="res://Enemy/Enemy.gd" id="1_ntq2o"]
-[ext_resource type="Texture2D" uid="uid://doghxopaqmdwr" path="res://platformerPack_character.png" id="1_s4nai"]
+[ext_resource type="Texture2D" uid="uid://byxrx2ddrgsts" path="res://Enemy/Slime.png" id="2_5il4w"]
 [ext_resource type="Script" path="res://Enemy/Damaged.gd" id="2_o7soe"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3u4y"]
-radius = 8.0
-height = 32.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmp15"]
+radius = 11.3137
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bmfq7"]
-atlas = ExtResource("1_s4nai")
-region = Rect2(288, 96, 96, 96)
+[sub_resource type="AtlasTexture" id="AtlasTexture_725eb"]
+atlas = ExtResource("2_5il4w")
+region = Rect2(0, 0, 42, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rk7da"]
-atlas = ExtResource("1_s4nai")
-region = Rect2(192, 96, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tnvmf"]
-atlas = ExtResource("1_s4nai")
-region = Rect2(96, 96, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p2nui"]
-atlas = ExtResource("1_s4nai")
-region = Rect2(0, 96, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lljg8"]
-atlas = ExtResource("1_s4nai")
-region = Rect2(0, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_010ub"]
-atlas = ExtResource("1_s4nai")
-region = Rect2(192, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0krsh"]
-atlas = ExtResource("1_s4nai")
-region = Rect2(288, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjqla"]
+atlas = ExtResource("2_5il4w")
+region = Rect2(0, 40, 42, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bensa"]
 animations = [{
 "frames": [{
-"duration": 4.0,
-"texture": SubResource("AtlasTexture_bmfq7")
-}, {
-"duration": 4.0,
-"texture": SubResource("AtlasTexture_rk7da")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_tnvmf")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_p2nui")
-}],
-"loop": true,
-"name": &"AMO Death",
-"speed": 5.0
-}, {
-"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lljg8")
+"texture": SubResource("AtlasTexture_725eb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_010ub")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0krsh")
+"texture": SubResource("AtlasTexture_xjqla")
 }],
 "loop": true,
 "name": &"AMO Walk",
@@ -72,19 +31,22 @@ animations = [{
 
 [node name="Enemy" type="CharacterBody2D"]
 position = Vector2(-464, 80)
+collision_layer = 2
 script = ExtResource("1_ntq2o")
+movement_pace = 100.0
+Jump_speed = -300.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(421, -7.62939e-06)
-shape = SubResource("CapsuleShape2D_r3u4y")
+position = Vector2(416, 14)
+shape = SubResource("CircleShape2D_gmp15")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(421, -2)
-scale = Vector2(0.270833, 0.291667)
+position = Vector2(416, 16)
+scale = Vector2(0.555802, 0.547917)
 sprite_frames = SubResource("SpriteFrames_bensa")
-animation = &"AMO Death"
+animation = &"AMO Walk"
 autoplay = "AMO Walk"
-frame_progress = 0.122149
+frame_progress = 0.0501984
 
 [node name="Damaged" type="Node2D" parent="."]
 script = ExtResource("2_o7soe")

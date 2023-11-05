@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://cji0rmocwiik4"]
+
+[ext_resource type="Script" path="res://Character/Celia.gd" id="1_sd5bk"]
+[ext_resource type="Texture2D" uid="uid://cugsqcuhtss18" path="res://Character/Celia.png" id="2_wry8g"]
+[ext_resource type="Script" path="res://Enemy/Damaged.gd" id="3_benbw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1orrl"]
+radius = 5.16129
+height = 11.4286
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_17p0j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjrox"]
+atlas = ExtResource("2_wry8g")
+region = Rect2(33, 0, 33, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b4lm"]
+atlas = ExtResource("2_wry8g")
+region = Rect2(0, 0, 33, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xer7p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjrox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b4lm")
+}],
+"loop": true,
+"name": &"Celia Walk",
+"speed": 5.0
+}]
+
+[node name="Celia" type="CharacterBody2D"]
+position = Vector2(-72, 232)
+collision_layer = 4
+script = ExtResource("1_sd5bk")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+position = Vector2(160, -256)
+remote_path = NodePath("../CollisionShape2D/Camera2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(72, -56)
+scale = Vector2(3.1, 2.8)
+shape = SubResource("CapsuleShape2D_1orrl")
+
+[node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
+position = Vector2(28.3871, -71.4286)
+scale = Vector2(0.322581, 0.357143)
+zoom = Vector2(1.5, 1)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="HealthBox" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthBox"]
+visible = false
+shape = SubResource("CircleShape2D_17p0j")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(80, -48)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(72, -56)
+sprite_frames = SubResource("SpriteFrames_xer7p")
+animation = &"Celia Walk"
+frame_progress = 0.0955963
+
+[node name="Damaged" type="Node2D" parent="."]
+script = ExtResource("3_benbw")

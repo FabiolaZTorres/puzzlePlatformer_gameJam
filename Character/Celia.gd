@@ -19,12 +19,12 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	# Handles Jump.
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
-	#Handle Magic
-	if Input.is_action_just_pressed("Fire"):
+	#Handles Magic
+	if Input.is_action_just_pressed("throw_ice"):
 		var IceCharge = IceBlast.instantiate()
 		IceCharge.position = Bracelet.global_position
 		
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	
 	
 	# Get the input direction, handle the movement/deceleration and the associated animations.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
 		$AnimatedSprite2D.play("Celia Walk")

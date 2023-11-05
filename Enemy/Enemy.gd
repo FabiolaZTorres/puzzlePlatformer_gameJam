@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@export var damage : int = 1
 @export var movement_pace = 20.0
 @export var Jump_speed = -200.0
 
@@ -13,6 +13,7 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	#checks if Enemy has collided with a wall and changes their direction to the opposite direction.
 	elif (is_on_wall()):
 		movement_direction *= -1
 	else:
@@ -20,7 +21,7 @@ func _physics_process(delta):
 
 	
 
-	# Handle the enemy movement.
+	# Handles the Enemy movement.
 	if movement_direction:
 		velocity.x = movement_direction.x * movement_pace
 	else:
@@ -28,5 +29,20 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+#Gives the Enemy the ability to jump
 func  jump():
 	velocity.y += Jump_speed
+
+
+
+
+
+
+#Checks if the Enemy collision mask makes contact with Celia's collision layer and lowers her health.
+func _on_player_attack_body_entered(body):
+	for child in body.get_children():
+		if child is Damaged:
+			child.attacked(damage)
+			get_tree().reload_current_scene()
+			
+	print(body.name)

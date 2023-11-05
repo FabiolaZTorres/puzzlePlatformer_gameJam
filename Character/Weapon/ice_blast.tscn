@@ -36,6 +36,7 @@ animations = [{
 }]
 
 [node name="IceBlast" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_nur8n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -44,3 +45,5 @@ shape = SubResource("RectangleShape2D_e5vdy")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_en2xj")
 animation = &"Breath of the Old Ones"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -13,16 +13,21 @@ func _process(delta):
 	
 		position.x +=  speed * delta
 
-#Possibly Replace with connect to "Enemy"
-#Checks if weapon collision makes contact with another body. needs work.
+#Checks if ice_blast collision mask makes contact with the Enemy colision layer and lowers the Enemy health.
 func _on_body_entered(body):
 	for child in body.get_children():
 		if child is Damaged:
-			child
+			child.attacked(damage)
 	
 	print(body.name)
-	
+
 #removing weapon post use.
 func _on_screen_exited():
 	self.queue_free()
+
+
+
+
+
+
 

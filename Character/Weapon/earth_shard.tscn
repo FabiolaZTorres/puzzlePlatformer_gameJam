@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://gp0vn1vlbcl0"]
+
+[ext_resource type="Script" path="res://Character/Weapon/EarthShard.gd" id="1_j658h"]
+[ext_resource type="Texture2D" uid="uid://clkmy0aj7dxr8" path="res://Character/Weapon/Strike of Danu.png" id="2_b7n3e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glefs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi6xr"]
+atlas = ExtResource("2_b7n3e")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2id4"]
+atlas = ExtResource("2_b7n3e")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tqe3"]
+atlas = ExtResource("2_b7n3e")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8lb5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi6xr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2id4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tqe3")
+}],
+"loop": true,
+"name": &"Rage of the Ancients",
+"speed": 5.0
+}]
+
+[node name="Earth Shard" type="Area2D"]
+collision_mask = 9
+script = ExtResource("1_j658h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_glefs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8lb5h")
+animation = &"Rage of the Ancients"

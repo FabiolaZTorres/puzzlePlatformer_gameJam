@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bia7x4irita82"
-path="res://.godot/imported/Wall Break.png-4f58287764eb6f19e4038a8ec65a0c8a.ctex"
+uid="uid://clkmy0aj7dxr8"
+path="res://.godot/imported/Strike of Danu.png-2c6bd7bc68dd09f112c3c9d92bae75d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Main Level/Wall Break.png"
-dest_files=["res://.godot/imported/Wall Break.png-4f58287764eb6f19e4038a8ec65a0c8a.ctex"]
+source_file="res://Character/Weapon/Strike of Danu.png"
+dest_files=["res://.godot/imported/Strike of Danu.png-2c6bd7bc68dd09f112c3c9d92bae75d7.ctex"]
 
 [params]
 

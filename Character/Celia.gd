@@ -12,6 +12,7 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var IceBlast = preload("res://Character/Weapon/ice_blast.tscn");
+var EarthShard = preload("res://Character/Weapon/earth_shard.tscn");
 
 
 func _physics_process(delta):
@@ -29,6 +30,12 @@ func _physics_process(delta):
 		IceCharge.position = Bracelet.global_position
 		
 		get_tree().current_scene.add_child(IceCharge)
+	
+	if Input.is_action_just_pressed("throw_earth"):
+		var EarthCharge = EarthShard.instantiate()
+		EarthCharge.position = Bracelet.global_position
+		
+		get_tree().current_scene.add_child(EarthCharge)
 	
 	
 	# Get the input direction, handle the movement/deceleration and the associated animations.

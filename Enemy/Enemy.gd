@@ -38,7 +38,7 @@ func  jump():
 
 
 
-#Checks if the Enemy collision mask makes contact with Celia's collision layer and lowers her health.
+#Checks if the Enemy collision mask 3 makes contact with Celia's collision layer 3 and lowers her health.
 func _on_player_attack_body_entered(body):
 	for child in body.get_children():
 		if child is Damaged:

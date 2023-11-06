@@ -1,10 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cji0rmocwiik4"]
+[gd_scene load_steps=9 format=3 uid="uid://rjqo5x4mjpgf"]
 
 [ext_resource type="Script" path="res://Character/Celia.gd" id="1_sd5bk"]
-[ext_resource type="Script" path="res://Character/HealthBox.gd" id="2_v5sgh"]
 [ext_resource type="Texture2D" uid="uid://cugsqcuhtss18" path="res://Character/Celia.png" id="2_wry8g"]
 [ext_resource type="Script" path="res://Enemy/Damaged.gd" id="3_benbw"]
-[ext_resource type="Script" path="res://Character/Prisoner Key.gd" id="5_dl7ry"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1orrl"]
 radius = 5.16129
@@ -51,16 +49,14 @@ shape = SubResource("CapsuleShape2D_1orrl")
 [node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
 position = Vector2(32.9032, -12.5)
 scale = Vector2(0.322581, 0.357143)
-zoom = Vector2(1.5, 1)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="HealthBox" type="Area2D" parent="."]
-position = Vector2(72, -56)
-script = ExtResource("2_v5sgh")
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HealthBox"]
-scale = Vector2(1.65, 1.65)
+visible = false
 shape = SubResource("CircleShape2D_17p0j")
 
 [node name="Marker2D" type="Marker2D" parent="."]
@@ -74,15 +70,3 @@ frame_progress = 0.0955963
 
 [node name="Damaged" type="Node2D" parent="."]
 script = ExtResource("3_benbw")
-
-[node name="Prisoner Key" type="Node2D" parent="."]
-script = ExtResource("5_dl7ry")
-
-[node name="Key_Detector" type="Area2D" parent="."]
-collision_layer = 32
-collision_mask = 32
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Key_Detector"]
-position = Vector2(72, -56)
-scale = Vector2(3.1, 2.8)
-shape = SubResource("CapsuleShape2D_1orrl")

@@ -67,6 +67,6 @@ shape = SubResource("RectangleShape2D_61vth")
 [node name="AttackDelay" type="Timer" parent="."]
 wait_time = 0.5
 
-[connection signal="body_entered" from="Player Attack" to="." method="_on_player_attack_body_entered"]
 [connection signal="body_entered" from="Player Attack" to="." method="_on_player_attack_body_entered2"]
+[connection signal="body_entered" from="Player Attack" to="." method="_on_player_attack_body_entered"]
 [connection signal="timeout" from="AttackDelay" to="." method="_on_attack_delay_timeout"]

@@ -1,8 +1,8 @@
 extends Area2D
 
-@export var damage : int = 1
+@export var damage : int = 20
 @export var speed = 300
-
+@export var Broken : bool = false
 
 func _ready():
 	$AnimatedSprite2D.play("Rage of the Ancients")
@@ -18,16 +18,14 @@ func _on_body_entered(body):
 	for child in body.get_children():
 		if child is Damaged:
 			child.attacked(damage)
+			child.death()
 	
 	print(body.name)
+
 
 #removing weapon post use.
 func _on_screen_exited():
 	self.queue_free()
 
-
-
-
-
-
-
+func _on_broken_wall_timeout():
+	Broken = true

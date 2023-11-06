@@ -38,9 +38,10 @@ animations = [{
 position = Vector2(-72, 232)
 collision_layer = 4
 script = ExtResource("1_sd5bk")
+hp = null
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-position = Vector2(174, -91)
+position = Vector2(160, -256)
 remote_path = NodePath("../CollisionShape2D/Camera2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -49,7 +50,7 @@ scale = Vector2(3.1, 2.8)
 shape = SubResource("CapsuleShape2D_1orrl")
 
 [node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
-position = Vector2(32.9032, -12.5)
+position = Vector2(28.3871, -71.4286)
 scale = Vector2(0.322581, 0.357143)
 zoom = Vector2(1.5, 1)
 position_smoothing_enabled = true
@@ -79,10 +80,11 @@ script = ExtResource("3_benbw")
 script = ExtResource("5_dl7ry")
 
 [node name="Key_Detector" type="Area2D" parent="."]
-collision_layer = 32
-collision_mask = 32
+collision_mask = 64
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Key_Detector"]
 position = Vector2(72, -56)
 scale = Vector2(3.1, 2.8)
 shape = SubResource("CapsuleShape2D_1orrl")
+
+[connection signal="body_entered" from="Key_Detector" to="." method="_on_key_detector_body_entered"]

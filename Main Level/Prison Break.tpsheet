@@ -1,0 +1,48 @@
+{
+	"textures": [
+		{
+			"image": "Prison Break.png",
+			"size": {
+				"w": 160,
+				"h": 66
+			},
+			"sprites": [
+				{
+					"filename": "ImprisonedVillager1.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 78,
+						"h": 64
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "ImprisonedVillager2.png",
+					"region": {
+						"x": 81,
+						"y": 1,
+						"w": 78,
+						"h": 64
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:9d9aa5146447885d786af15d870331d0:bcd5f1d68d31633232ff1a91161b3737:c9fc024e3f5c58a65f9df2834ef02187$"
+	}
+}

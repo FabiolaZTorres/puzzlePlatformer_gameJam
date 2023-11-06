@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4gbo5aempxgn"]
+
+[ext_resource type="Texture2D" uid="uid://utda5jorv3h6" path="res://Levels/Main Level/Key.png" id="1_me4n4"]
+[ext_resource type="Script" path="res://Key Collected.gd" id="2_ej5bq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0jpx"]
+atlas = ExtResource("1_me4n4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6eap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0jpx")
+}],
+"loop": true,
+"name": &"Key",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qrdd3"]
+
+[node name="Key" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i6eap")
+animation = &"Key"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qrdd3")
+
+[node name="Key Collected" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_mask = 5
+script = ExtResource("2_ej5bq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Key Collected"]
+shape = SubResource("CapsuleShape2D_qrdd3")
+
+[connection signal="body_entered" from="Key Collected" to="Key Collected" method="_on_body_entered"]

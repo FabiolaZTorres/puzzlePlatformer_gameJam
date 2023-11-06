@@ -1,0 +1,48 @@
+{
+	"textures": [
+		{
+			"image": "Wall Break.png",
+			"size": {
+				"w": 32,
+				"h": 132
+			},
+			"sprites": [
+				{
+					"filename": "BreakableWall1.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 30,
+						"h": 64
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "BreakableWall2.png",
+					"region": {
+						"x": 1,
+						"y": 67,
+						"w": 30,
+						"h": 64
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:9a20a41777520ae05e7f946e7f210823:44e3bdb90e71d155449cc666945dcbd8:7de59e723d9bd3c80a9763e4a7f6b959$"
+	}
+}

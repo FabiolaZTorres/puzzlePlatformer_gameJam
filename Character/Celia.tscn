@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cji0rmocwiik4"]
+[gd_scene load_steps=9 format=3 uid="uid://rjqo5x4mjpgf"]
 
 [ext_resource type="Script" path="res://Character/Celia.gd" id="1_sd5bk"]
 [ext_resource type="Texture2D" uid="uid://cugsqcuhtss18" path="res://Character/Celia.png" id="2_wry8g"]
@@ -38,7 +38,7 @@ collision_layer = 4
 script = ExtResource("1_sd5bk")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-position = Vector2(160, -256)
+position = Vector2(174, -91)
 remote_path = NodePath("../CollisionShape2D/Camera2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -47,9 +47,8 @@ scale = Vector2(3.1, 2.8)
 shape = SubResource("CapsuleShape2D_1orrl")
 
 [node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
-position = Vector2(28.3871, -71.4286)
+position = Vector2(32.9032, -12.5)
 scale = Vector2(0.322581, 0.357143)
-zoom = Vector2(1.5, 1)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 

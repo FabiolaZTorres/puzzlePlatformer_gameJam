@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 
 @export var hp = 2
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 200.0
+const JUMP_VELOCITY = -300.0
 
 #Handles positioning Magic on the hand
 @onready var Bracelet = $Marker2D

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bo6f1mnmvgpsl"]
+[gd_scene load_steps=8 format=3 uid="uid://bo6f1mnmvgpsl"]
 
 [ext_resource type="Script" path="res://Levels/level_switch.gd" id="1_km7fr"]
+[ext_resource type="PackedScene" path="res://Levels/Tutorial Level 2/Test Run.res" id="2_cl66d"]
 
 [sub_resource type="Gradient" id="Gradient_s8k4r"]
 interpolation_mode = 1
@@ -81,12 +82,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_km7fr")
+Load_Level = ExtResource("2_cl66d")
 
 [node name="Fade" type="TextureRect" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(100, 100)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_4njh2")
 
@@ -94,3 +105,5 @@ texture = SubResource("GradientTexture2D_4njh2")
 libraries = {
 "": SubResource("AnimationLibrary_ishyf")
 }
+
+[connection signal="animation_finished" from="Fading" to="." method="_on_fading_animation_finished"]

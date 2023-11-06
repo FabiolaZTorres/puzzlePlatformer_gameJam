@@ -43,6 +43,7 @@ script = ExtResource("1_nur8n")
 shape = SubResource("RectangleShape2D_e5vdy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 0.785398
 sprite_frames = SubResource("SpriteFrames_en2xj")
 animation = &"Breath of the Old Ones"
 

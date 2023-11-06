@@ -42,5 +42,6 @@ script = ExtResource("1_j658h")
 shape = SubResource("RectangleShape2D_glefs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 0.785398
 sprite_frames = SubResource("SpriteFrames_8lb5h")
 animation = &"Rage of the Ancients"

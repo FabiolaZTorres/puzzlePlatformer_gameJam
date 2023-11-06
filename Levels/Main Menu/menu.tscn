@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://8rfvc4vrpb6o"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_qc42h"]
+[ext_resource type="PackedScene" uid="uid://48h52ko64tnl" path="res://Levels/Tutorial Level/Test Run.res" id="2_k8mmp"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_qc42h")
+Load_Level = ExtResource("2_k8mmp")
+
+[node name="Play" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 432.0
+offset_top = 150.0
+offset_right = 718.0
+offset_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 432.0
+offset_top = 370.0
+offset_right = 718.0
+offset_bottom = 521.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

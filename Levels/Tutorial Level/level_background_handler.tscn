@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnm3t1qx4j37s"]
+
+[ext_resource type="Script" path="res://Levels/Tutorial Level/Level Background Handler.gd" id="1_qywgk"]
+[ext_resource type="Texture2D" uid="uid://q7jx6h2cdlvk" path="res://Levels/Tutorial Level/Wall.png" id="2_fv7vp"]
+
+[node name="Level Background Handler" type="ParallaxBackground"]
+script = ExtResource("1_qywgk")
+
+[node name="Mansion Background" type="ParallaxLayer" parent="."]
+position = Vector2(-400, -256)
+scale = Vector2(2, 2)
+motion_mirroring = Vector2(370, 410)
+
+[node name="Wall" type="Sprite2D" parent="Mansion Background"]
+position = Vector2(80, 144)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("2_fv7vp")
+
+[node name="Wall2" type="Sprite2D" parent="Mansion Background"]
+position = Vector2(80, -680)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("2_fv7vp")
+
+[node name="Wall3" type="Sprite2D" parent="Mansion Background"]
+position = Vector2(860, 144)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("2_fv7vp")
+
+[node name="Wall4" type="Sprite2D" parent="Mansion Background"]
+position = Vector2(868, -680)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("2_fv7vp")
+
+[node name="Wall5" type="Sprite2D" parent="Mansion Background"]
+position = Vector2(1640, -680)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("2_fv7vp")
+
+[node name="Wall6" type="Sprite2D" parent="Mansion Background"]
+position = Vector2(1640, 144)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("2_fv7vp")
+
+[node name="Wall7" type="Sprite2D" parent="Mansion Background"]
+position = Vector2(2416, -680)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("2_fv7vp")
+
+[node name="Wall8" type="Sprite2D" parent="Mansion Background"]
+position = Vector2(2412, 144)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("2_fv7vp")

@@ -20,3 +20,4 @@ func _on_celia_arrives_body_entered(body):
 	for child in body.get_children():
 		if child is Prisoner_Key and child.have_key():
 			$AnimatedSprite2D.play("Prison Break")
+			$Objective.visible

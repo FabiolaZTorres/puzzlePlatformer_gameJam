@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="game jam puzzle platformer"
-run/main_scene="res://levels/level_1.tscn"
+run/main_scene="res://Levels/Tutorial Level/Test Run.res"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=960
+window/size/viewport_height=540
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"

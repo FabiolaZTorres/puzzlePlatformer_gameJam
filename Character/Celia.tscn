@@ -36,6 +36,7 @@ animations = [{
 
 [node name="Celia" type="CharacterBody2D"]
 position = Vector2(-72, 232)
+scale = Vector2(0.99, 0.99)
 collision_layer = 4
 script = ExtResource("1_sd5bk")
 
@@ -51,7 +52,6 @@ shape = SubResource("CapsuleShape2D_1orrl")
 [node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
 position = Vector2(32.9032, -12.5)
 scale = Vector2(0.322581, 0.357143)
-zoom = Vector2(1.5, 1)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 

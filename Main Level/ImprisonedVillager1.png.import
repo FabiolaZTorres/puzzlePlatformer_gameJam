@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxbcp0g2go7hn"
-path="res://.godot/imported/ImprisonedVillager1.png-12051b5ce5238d6ffd23a97716211902.ctex"
+path="res://.godot/imported/ImprisonedVillager1.png-7aaf23cc9cc0e947d1768871a4760c08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Main Level/ImprisonedVillager1.png"
-dest_files=["res://.godot/imported/ImprisonedVillager1.png-12051b5ce5238d6ffd23a97716211902.ctex"]
+source_file="res://Main Level/ImprisonedVillager1.png"
+dest_files=["res://.godot/imported/ImprisonedVillager1.png-7aaf23cc9cc0e947d1768871a4760c08.ctex"]
 
 [params]
 

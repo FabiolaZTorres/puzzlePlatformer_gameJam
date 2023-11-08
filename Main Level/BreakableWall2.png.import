@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vmwcbs7thjkq"
-path="res://.godot/imported/BreakableWall2.png-2b0036094617ecf736a418705fd8239a.ctex"
+path="res://.godot/imported/BreakableWall2.png-6bfb2a7a886a190c74705eba13e55ad7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Main Level/BreakableWall2.png"
-dest_files=["res://.godot/imported/BreakableWall2.png-2b0036094617ecf736a418705fd8239a.ctex"]
+source_file="res://Main Level/BreakableWall2.png"
+dest_files=["res://.godot/imported/BreakableWall2.png-6bfb2a7a886a190c74705eba13e55ad7.ctex"]
 
 [params]
 

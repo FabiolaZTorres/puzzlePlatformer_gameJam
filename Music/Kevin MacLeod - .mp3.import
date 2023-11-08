@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cm0fjj0jttajl"
-path="res://.godot/imported/Kevin MacLeod - .mp3-5dd0f8348d65658a97bb124c2c0fd325.mp3str"
+path="res://.godot/imported/Kevin MacLeod - .mp3-685ebf12896f311e77ee060c765411c1.mp3str"
 
 [deps]
 
-source_file="res://Music/Kevin MacLeod - .mp3"
-dest_files=["res://.godot/imported/Kevin MacLeod - .mp3-5dd0f8348d65658a97bb124c2c0fd325.mp3str"]
+source_file="res://music/Kevin MacLeod - .mp3"
+dest_files=["res://.godot/imported/Kevin MacLeod - .mp3-685ebf12896f311e77ee060c765411c1.mp3str"]
 
 [params]
 

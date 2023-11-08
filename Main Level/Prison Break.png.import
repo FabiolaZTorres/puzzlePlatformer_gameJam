@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djwwnmc31eloc"
-path="res://.godot/imported/Prison Break.png-b7141f79a601990d84955745c2cd927b.ctex"
+path="res://.godot/imported/Prison Break.png-1d56880a6aa2a46591572af807406b21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Main Level/Prison Break.png"
-dest_files=["res://.godot/imported/Prison Break.png-b7141f79a601990d84955745c2cd927b.ctex"]
+source_file="res://Main Level/Prison Break.png"
+dest_files=["res://.godot/imported/Prison Break.png-1d56880a6aa2a46591572af807406b21.ctex"]
 
 [params]
 

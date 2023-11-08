@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0rjipwhds28y"]
+[gd_scene load_steps=7 format=3 uid="uid://c0rjipwhds28y"]
 
-[ext_resource type="Texture2D" uid="uid://djwwnmc31eloc" path="res://Levels/Main Level/Prison Break.png" id="1_3syxm"]
+[ext_resource type="Texture2D" uid="uid://djwwnmc31eloc" path="res://Main Level/Prison Break.png" id="1_3syxm"]
 [ext_resource type="Script" path="res://Levels/Main Level/prisoner.gd" id="1_5epxq"]
-[ext_resource type="Script" path="res://Levels/Main Level/Objective.gd" id="3_8fj4v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8x8cw"]
 atlas = ExtResource("1_3syxm")
@@ -48,15 +47,5 @@ collision_mask = 4
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Celia Arrives"]
 scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_2p3h3")
-
-[node name="Objective" type="RichTextLabel" parent="."]
-offset_left = -20.0
-offset_top = -65.0
-offset_right = 105.0
-offset_bottom = 441.0
-scale = Vector2(0.3, 0.3)
-text = "Thank you Adventurer but the villagers are in another manor."
-fit_content = true
-script = ExtResource("3_8fj4v")
 
 [connection signal="body_entered" from="Celia Arrives" to="." method="_on_celia_arrives_body_entered"]
